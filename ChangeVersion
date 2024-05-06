@@ -1,0 +1,20 @@
+/*This is pseudo code for changing version number using a generic function*/
+/*NOTE: I do not have experience in python so written pseudo code to optimize the given code*/
+UpdateVersionNum(char *fileName,char *VersionString,int value)
+{
+	/*open file in read and write mode*/
+	fopen(fileName,"rw");
+	/*Read the given VersionString line from file*/
+	fwrite() /*Update the read line with given value.*/
+	fclose; /*Close the file*/
+}
+
+
+main()
+{
+	/*Get the build Num from environmental variable*/
+	getenv(BuildNum);
+	/*Invoke generic function with file name and version string to be updated with build num*/
+	UpdateVersionNum("SConstruct","point",BuildNum);
+	UpdateVersionNum("VERSION","ADLMSDK_VERSION_POINT",BuildNum);
+} 
